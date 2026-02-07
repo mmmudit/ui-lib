@@ -9,7 +9,9 @@ import {
 } from "./components/Card";
 import Neucheckbox from "./components/Checkbox";
 import Nav from "./components/Nav";
+import NeuSlider from "./components/Slider";
 import NeuSwitch from "./components/Switch";
+import NeuProgress from "./components/Progress";
 
 function App() {
   return (
@@ -43,7 +45,33 @@ function App() {
               <NeuSwitch />
               <Neucheckbox />
               <Neucheckbox disabled />
+              <NeuSlider />
+              <NeuSlider variant={"secondary"} />
             </CardFooter>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Progress Bars</CardTitle>
+              <CardDescription>
+                simple progress bars with different values and orientations to
+                demonstrate the neumorphic design.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4 h-36 flex gap-4">
+              <NeuProgress orientation="vertical" max={100} value={25} />
+              <NeuProgress
+                orientation="vertical"
+                variant="secondary"
+                max={100}
+                value={50}
+              />
+              <NeuProgress orientation="vertical" max={100} value={75} />
+            </CardContent>
+            <CardContent className="space-y-4">
+              <NeuProgress orientation="horizontal" max={100} value={25} />
+              <NeuProgress variant="secondary" max={100} value={50} />
+              <NeuProgress orientation="horizontal" max={100} value={75} />
+            </CardContent>
           </Card>
         </div>
       </div>
