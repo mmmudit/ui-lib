@@ -7,6 +7,7 @@ import {
   CardContent,
   CardFooter,
 } from "./components/Card";
+import Neucheckbox from "./components/Checkbox";
 import Nav from "./components/Nav";
 import NeuSwitch from "./components/Switch";
 
@@ -40,6 +41,8 @@ function App() {
             </CardContent>
             <CardFooter>
               <NeuSwitch />
+              <Neucheckbox />
+              <Neucheckbox disabled />
             </CardFooter>
           </Card>
         </div>
