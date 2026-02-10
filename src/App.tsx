@@ -12,6 +12,15 @@ import Nav from "./components/Nav";
 import NeuSlider from "./components/Slider";
 import NeuSwitch from "./components/Switch";
 import NeuProgress from "./components/Progress";
+import { NeuBadge } from "./components/Badge";
+import Input from "./components/Input";
+import {
+  TabsIndicator,
+  TabsList,
+  TabsPanel,
+  TabsRoot,
+  TabsTab,
+} from "./components/Tabs";
 
 function App() {
   return (
@@ -26,6 +35,7 @@ function App() {
         <Button variant={"primary"} disabled>
           Warning
         </Button>
+        <NeuBadge>Badge</NeuBadge>
         <div className="m-6">
           <Card>
             <CardHeader>
@@ -72,6 +82,29 @@ function App() {
               <NeuProgress variant="secondary" max={100} value={50} />
               <NeuProgress orientation="horizontal" max={100} value={75} />
             </CardContent>
+            <CardFooter className="space-y-2">
+              <Input type="email"></Input>
+              <Input></Input>
+              <Input></Input>
+            </CardFooter>
+          </Card>
+          <Card>
+            <CardHeader>
+              <TabsRoot>
+                <TabsList className="space-x-4">
+                  <TabsTab value={"overview"}>Overview</TabsTab>
+                  <TabsTab value={"user"}>User</TabsTab>
+                </TabsList>
+                <TabsPanel value={"overview"}>
+                  <h2>this is overview</h2>
+                  <p>more info about the overview</p>
+                </TabsPanel>
+                <TabsPanel value={"user"}>
+                  <h2>this is user overview</h2>
+                  <p>more info about the user overview</p>
+                </TabsPanel>
+              </TabsRoot>
+            </CardHeader>
           </Card>
         </div>
       </div>

@@ -9,14 +9,14 @@
   --color-destructive: var(--color-red-600);
   --color-warning: var(--color-orange-600);
   --color-shadow: rgba(0, 0, 0, 0.2);
-  --color-edge: rgba(255, 255, 255, 0.1);
-  --color-border: var(--color-zinc-100);
-  --color-highlight: var(--color-white);
+  --color-border: var(--color-zinc-200);
+  --color-highlight: rgba(255, 255, 255, 1);
   --shadow-raised:
     2px 2px 6px var(--color-shadow), -2px -2px 6px var(--color-highlight),
     inset 0px 0px 0px var(--color-shadow),
     inset 0px 0px 0px var(--color-highlight),
-    inset 1px 1px 2px var(--color-edge);
+    inset 1px 1px 2px var(--color-highlight),
+    inset -1px -1px 2px var(--color-shadow);
   --shadow-inset:
     1px 1px 2px var(--color-shadow), -1px -1px 2px var(--color-highlight),
     inset 2px 2px 6px var(--color-shadow),
