@@ -14,6 +14,12 @@ import NeuSwitch from "./components/Switch";
 import NeuProgress from "./components/Progress";
 import { NeuBadge } from "./components/Badge";
 import Input from "./components/Input";
+import Textarea from "./components/Textarea";
+import Select from "./components/Select";
+import { RadioGroup, RadioItem } from "./components/Radio";
+import NeuAvatar from "./components/Avatar";
+import { Alert, AlertDescription, AlertTitle } from "./components/Alert";
+import { Stat, StatLabel, StatValue } from "./components/Stat";
 import {
   TabsIndicator,
   TabsList,
@@ -123,6 +129,104 @@ function App() {
                   </p>
                 </TabsPanel>
               </TabsRoot>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Textarea & Select</CardTitle>
+              <CardDescription>Essential form primitives.</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <Textarea placeholder="Leave a note..." />
+              <div className="relative">
+                <Select defaultValue="daily">
+                  <option value="daily">Daily summary</option>
+                  <option value="weekly">Weekly summary</option>
+                  <option value="monthly">Monthly summary</option>
+                </Select>
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">
+                  v
+                </span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Radio Group</CardTitle>
+              <CardDescription>Single-choice selections.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <RadioGroup>
+                <RadioItem name="plan" value="starter" label="Starter" />
+                <RadioItem name="plan" value="pro" label="Pro" />
+                <RadioItem name="plan" value="team" label="Team" />
+              </RadioGroup>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Avatars</CardTitle>
+              <CardDescription>Image and fallback states.</CardDescription>
+            </CardHeader>
+            <CardContent className="flex items-center gap-4">
+              <NeuAvatar
+                size="sm"
+                src="https://i.pinimg.com/1200x/af/91/1b/af911b8119ee0cc0d44c031be361a802.jpg"
+                alt="Avatar"
+              />
+              <NeuAvatar
+                size="md"
+                src="https://i.pinimg.com/1200x/af/91/1b/af911b8119ee0cc0d44c031be361a802.jpg"
+                alt="Avatar"
+              />
+              <NeuAvatar size="lg" fallback="NM" />
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Alerts</CardTitle>
+              <CardDescription>Status messaging styles.</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <Alert>
+                <AlertTitle>Heads up</AlertTitle>
+                <AlertDescription>
+                  Neumorphic surfaces stay subtle.
+                </AlertDescription>
+              </Alert>
+              <Alert variant="success">
+                <AlertTitle>Success</AlertTitle>
+                <AlertDescription>Everything saved correctly.</AlertDescription>
+              </Alert>
+              <Alert variant="warning">
+                <AlertTitle>Warning</AlertTitle>
+                <AlertDescription>Some fields need attention.</AlertDescription>
+              </Alert>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Stats</CardTitle>
+              <CardDescription>Dashboard-style metrics.</CardDescription>
+            </CardHeader>
+            <CardContent className="grid grid-cols-3 gap-3">
+              <Stat>
+                <StatLabel>Plays</StatLabel>
+                <StatValue>2.4K</StatValue>
+              </Stat>
+              <Stat>
+                <StatLabel>Likes</StatLabel>
+                <StatValue>340</StatValue>
+              </Stat>
+              <Stat>
+                <StatLabel>Shares</StatLabel>
+                <StatValue>78</StatValue>
+              </Stat>
             </CardContent>
           </Card>
 
