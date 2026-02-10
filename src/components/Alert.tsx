@@ -2,15 +2,15 @@ import { mergeProps, useRender } from "@base-ui/react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const alertVariants = cva(
-  "w-full rounded-2xl border-3 border-border px-4 py-3 shadow-inset bg-linear-to-tl",
+  "w-full rounded-2xl border border-border bg-white/6 backdrop-blur-xl px-4 py-3 shadow-inset",
   {
     variants: {
       variant: {
-        default: "from-muted/10 to-muted/30 text-foreground",
-        info: "from-primary/5 to-primary/20 text-primary",
-        success: "from-emerald-500/5 to-emerald-500/20 text-emerald-600",
-        warning: "from-warning/5 to-warning/20 text-warning",
-        destructive: "from-destructive/5 to-destructive/20 text-destructive",
+        default: "text-foreground",
+        info: "text-primary border-primary/30",
+        success: "text-emerald-300 border-emerald-400/30",
+        warning: "text-warning border-warning/30",
+        destructive: "text-destructive border-destructive/30",
       },
     },
     defaultVariants: {

@@ -22,7 +22,7 @@ export function RadioGroup(props: RadioGroupProps) {
 const radioItemVariants = cva("inline-flex items-center gap-3 text-sm");
 const radioInputVariants = cva("peer sr-only");
 const radioControlVariants = cva(
-  "relative h-5 w-5 rounded-full border-2 border-highlight bg-background shadow-inset flex items-center justify-center transition-all duration-200 peer-checked:border-primary peer-checked:shadow-raised after:absolute after:h-2.5 after:w-2.5 after:rounded-full after:bg-primary after:opacity-0 after:transition-opacity after:duration-200 peer-checked:after:opacity-100",
+  "relative h-5 w-5 rounded-full border border-border bg-white/6 backdrop-blur-md shadow-inset flex items-center justify-center transition-all duration-200 peer-checked:border-primary/50 peer-checked:shadow-raised after:absolute after:h-2.5 after:w-2.5 after:rounded-full after:bg-primary after:opacity-0 after:transition-opacity after:duration-200 peer-checked:after:opacity-100",
 );
 
 interface RadioItemProps extends useRender.ComponentProps<"input"> {

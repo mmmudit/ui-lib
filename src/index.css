@@ -3,45 +3,49 @@
 @custom-variant dark (&:where(.dark,.dark *));
 
 @theme {
-  --color-background: var(--color-zinc-200);
-  --color-foreground: var(--color-zinc-700);
-  --color-primary: var(--color-indigo-600);
-  --color-destructive: var(--color-red-600);
-  --color-warning: var(--color-orange-600);
-  --color-shadow: rgba(0, 0, 0, 0.2);
-  --color-border: var(--color-zinc-200);
-  --color-highlight: rgba(255, 255, 255, 1);
+  --color-background: #0c0f1a;
+  --color-foreground: #e6e8f0;
+  --color-primary: #7c8cff;
+  --color-destructive: #ff6b6b;
+  --color-warning: #ffb347;
+  --color-shadow: rgba(0, 0, 0, 0.55);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-highlight: rgba(255, 255, 255, 0.25);
   --shadow-raised:
-    2px 2px 6px var(--color-shadow), -2px -2px 6px var(--color-highlight),
-    inset 0px 0px 0px var(--color-shadow),
-    inset 0px 0px 0px var(--color-highlight),
-    inset 1px 1px 2px var(--color-highlight),
-    inset -1px -1px 2px var(--color-shadow);
+    0 18px 40px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06);
   --shadow-inset:
-    1px 1px 2px var(--color-shadow), -1px -1px 2px var(--color-highlight),
-    inset 2px 2px 6px var(--color-shadow),
-    inset -2px -2px 6px var(--color-highlight);
-  --color-muted: var(--color-zinc-300);
-  --color-muted-foreground: var(--color-zinc-600);
+    inset 0 1px 1px rgba(255, 255, 255, 0.08),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.45), 0 8px 22px rgba(0, 0, 0, 0.35);
+  --color-muted: rgba(255, 255, 255, 0.08);
+  --color-muted-foreground: rgba(230, 232, 240, 0.6);
 }
 
-@layer theme {
-  .dark {
-    --color-background: var(--color-zinc-900);
-    --color-foreground: var(--color-zinc-100);
-    --color-primary: var(--color-indigo-400);
-    --color-highlight: rgba(255, 255, 255, 0.2);
-    --color-shadow: rgba(0, 0, 0, 0.75);
-    --color-destructive: var(--color-red-400);
-    --color-warning: var(--color-orange-400);
-    --color-muted: var(--color-zinc-700);
-    --color-muted-foreground: var(--color-zinc-400);
-    --color-border: var(--color-zinc-950);
-  }
-}
 @layer base {
   html,
   body {
     @apply bg-background text-foreground;
+  }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(
+        900px circle at 20% 15%,
+        rgba(124, 140, 255, 0.15),
+        transparent 60%
+      ),
+      radial-gradient(
+        700px circle at 80% 20%,
+        rgba(255, 107, 107, 0.12),
+        transparent 60%
+      ),
+      radial-gradient(
+        800px circle at 50% 80%,
+        rgba(125, 211, 252, 0.12),
+        transparent 60%
+      ),
+      linear-gradient(160deg, #0b0e18 0%, #0a0d16 50%, #0b0f1a 100%);
   }
 }

@@ -1,17 +1,20 @@
 import { mergeProps, useRender } from "@base-ui/react";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const cardVariants = cva("rounded-2xl border-3 border-border", {
-  variants: {
-    variant: {
-      raised: "shadow-raised",
-      inset: "shadow-inset",
+const cardVariants = cva(
+  "rounded-2xl border border-border bg-white/6 backdrop-blur-xl",
+  {
+    variants: {
+      variant: {
+        raised: "shadow-raised",
+        inset: "shadow-inset",
+      },
+    },
+    defaultVariants: {
+      variant: "raised",
     },
   },
-  defaultVariants: {
-    variant: "raised",
-  },
-});
+);
 
 interface CardProps
   extends useRender.ComponentProps<"div">, VariantProps<typeof cardVariants> {}
@@ -75,7 +78,7 @@ export function CardTitle(props: CardTitleProps) {
 }
 //Card Description
 const cardDescriptionVariants = cva("text-muted-foreground text-sm");
- 
+
 interface CardDescriptionProps
   extends
     useRender.ComponentProps<"div">,
@@ -98,7 +101,9 @@ export function CardDescription(props: CardDescriptionProps) {
 const cardContentVariants = cva("p-6 pt-0");
 
 interface CardContentProps
-  extends useRender.ComponentProps<"div">, VariantProps<typeof cardContentVariants> {}
+  extends
+    useRender.ComponentProps<"div">,
+    VariantProps<typeof cardContentVariants> {}
 
 export function CardContent(props: CardContentProps) {
   const mergedProps = mergeProps(props, {
@@ -117,7 +122,9 @@ export function CardContent(props: CardContentProps) {
 const cardFooterVariants = cva("p-6 pt-0");
 
 interface CardFooterProps
-  extends useRender.ComponentProps<"div">, VariantProps<typeof cardFooterVariants> {}
+  extends
+    useRender.ComponentProps<"div">,
+    VariantProps<typeof cardFooterVariants> {}
 
 export function CardFooter(props: CardFooterProps) {
   const mergedProps = mergeProps(props, {

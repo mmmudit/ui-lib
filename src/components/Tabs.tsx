@@ -1,3 +1,4 @@
+import React from "react";
 import { mergeProps, Tabs } from "@base-ui/react";
 import { cva } from "class-variance-authority";
 
@@ -12,7 +13,7 @@ export function TabsRoot(props: TabsRootProps) {
   return <Tabs.Root {...rootMerge} />;
 }
 const tabsTabVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-xl px-4 py-2 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[selected]:bg-background data-[selected]:text-foreground data-[selected]:shadow-inset cursor-pointer hover:text-foreground duration-350 relative z-10",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-xl px-4 py-2 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/25 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[selected]:bg-white/16 data-[selected]:text-foreground data-[selected]:shadow-inset cursor-pointer hover:text-foreground duration-350 relative z-10",
 );
 
 interface TabsTabProps extends React.ComponentProps<typeof Tabs.Tab> {}
@@ -25,7 +26,7 @@ export function TabsTab(props: TabsTabProps) {
 }
 
 const tabsListVariants = cva(
-  "relative inline-flex h-12 items-center justify-center rounded-2xl bg-linear-to-tl from-background to-highlight/75 p-1 text-muted-foreground shadow-raised border-3 border-border gap-4",
+  "relative inline-flex h-12 items-center justify-center rounded-2xl border border-border bg-white/6 backdrop-blur-xl p-1 text-muted-foreground shadow-raised gap-4",
 );
 
 interface TabsListProps extends React.ComponentProps<typeof Tabs.List> {}
@@ -38,7 +39,7 @@ export function TabsList(props: TabsListProps) {
 }
 
 const tabsIndicatorVariants = cva(
-  "absolute rounded-sm bg-background shadow-raised transition-all duration-200 border-1 border-background",
+  "absolute rounded-lg bg-white/12 shadow-raised transition-all duration-200 border border-border pointer-events-none",
 );
 
 interface TabsIndicatorProps extends React.ComponentProps<

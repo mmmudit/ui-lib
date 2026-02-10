@@ -2,17 +2,17 @@ import { mergeProps, useRender } from "@base-ui/react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-full border-2 border-background px-2.5 py-0.5 text-sm font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex items-center rounded-full border border-border bg-white/8 px-2.5 py-0.5 text-sm font-semibold text-foreground backdrop-blur-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/25 focus:ring-offset-2",
   {
     variants: {
       variant: {
-        default: "bg-muted text-foreground shadow-raised hover:shadow-inset",
+        default: "shadow-raised hover:shadow-inset",
         primary:
-          "bg-linear-to-tl from-primary/5 to-primary/25 text-primary shadow-raised hover:shadow-inset",
+          "text-primary border-primary/40 shadow-raised hover:shadow-inset",
         destructive:
-          "bg-linear-to-tl from-destructive/5 to-destructive/25 text-destructive shadow-raised hover:shadow-inset",
+          "text-destructive border-destructive/40 shadow-raised hover:shadow-inset",
         warning:
-          "bg-linear-to-tl from-warning/5 to-warning/25 text-warning shadow-raised hover:shadow-inset",
+          "text-warning border-warning/40 shadow-raised hover:shadow-inset",
       },
     },
     defaultVariants: {

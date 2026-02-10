@@ -2,7 +2,7 @@ import { mergeProps, useRender } from "@base-ui/react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const avatarVariants = cva(
-  "relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full border-3 border-border shadow-raised bg-linear-to-tl from-background to-highlight/75 text-foreground",
+  "relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full border border-border bg-white/8 backdrop-blur-xl shadow-raised text-foreground",
   {
     variants: {
       size: {

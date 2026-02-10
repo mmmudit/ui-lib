@@ -2,7 +2,7 @@ import { mergeProps, useRender } from "@base-ui/react";
 import { cva } from "class-variance-authority";
 
 const statVariants = cva(
-  "rounded-2xl border-3 border-border px-4 py-3 shadow-raised bg-linear-to-tl from-background to-highlight/75",
+  "rounded-2xl border border-border bg-white/6 backdrop-blur-xl px-4 py-3 shadow-raised",
 );
 
 interface StatProps extends useRender.ComponentProps<"div"> {}

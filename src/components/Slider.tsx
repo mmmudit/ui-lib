@@ -3,13 +3,15 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 const sliderVariants = cva("w-full h-4");
 
-const trackVariants = cva("relative w-full rounded-full shadow-inset h-4");
+const trackVariants = cva(
+  "relative w-full rounded-full border border-border bg-white/6 backdrop-blur-md shadow-inset h-4",
+);
 
 const rangeVariants = cva("absolute h-full rounded-full bg-primary", {
   variants: {
     variant: {
-      default: "bg-linear-to-tl from-primary/5 to-primary/75",
-      secondary: "bg-linear-to-tl from-muted-foreground to-muted-foreground/75",
+      default: "bg-linear-to-tl from-primary/80 to-primary/35",
+      secondary: "bg-linear-to-tl from-white/50 to-white/20",
     },
   },
   defaultVariants: {
@@ -18,7 +20,7 @@ const rangeVariants = cva("absolute h-full rounded-full bg-primary", {
 });
 
 const thumbVariants = cva(
-  "rounded-full border-1 border-highlight bg-background shadow-inset active:shadow-raised duration-350 transition-shadow h-5 w-5 cursor-pointer ",
+  "rounded-full border border-border bg-white/12 backdrop-blur-md shadow-inset active:shadow-raised duration-350 transition-shadow h-5 w-5 cursor-pointer",
 );
 
 interface SliderProps

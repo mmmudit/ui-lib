@@ -2,7 +2,7 @@ import { mergeProps, Progress, type useRender } from "@base-ui/react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const progressVariants = cva(
-  "relative overflow-hidden rounded-full shadow-inset p-0.25 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 bg-background",
+  "relative overflow-hidden rounded-full border border-border bg-white/6 backdrop-blur-md shadow-inset p-0.25 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2",
   {
     variants: {
       orientation: {
@@ -17,7 +17,7 @@ const progressVariants = cva(
 );
 
 const progressIndicatorVariants = cva(
-  "bg-primary h-full rounded-full transition-all duration-300 ease-out",
+  "h-full rounded-full transition-all duration-300 ease-out",
   {
     variants: {
       orientation: {
@@ -26,8 +26,8 @@ const progressIndicatorVariants = cva(
       },
 
       variant: {
-        default: "from-primary to-primary/75",
-        secondary: "from-muted-foreground to-muted-foreground/75",
+        default: "from-primary/80 to-primary/35",
+        secondary: "from-white/50 to-white/20",
       },
     },
     defaultVariants: {

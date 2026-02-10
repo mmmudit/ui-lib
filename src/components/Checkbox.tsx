@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 import { Check } from "lucide-react";
 
 const checkboxVariants = cva(
-  "inline-flex h-5 w-5 shrink-0 relative rounded-sm border-1 border-highlight bg-background shadow-inset focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 data-[checked]:bg-linear-to-tl duration-350 ease-out transitio-all data-[checked]:from-primary/5 data-[checked]:to-primary/25 data-[checked]:shadow-raised data-[checked]:border-primary/50 cursor-pointer data-[disabled]:opacity-50 data-[disabled]:pointer-events-none",
+  "inline-flex h-5 w-5 shrink-0 relative rounded-sm border border-border bg-white/6 backdrop-blur-md shadow-inset focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/25 focus-visible:ring-offset-2 data-[checked]:bg-white/16 duration-350 ease-out transition-all data-[checked]:shadow-raised data-[checked]:border-primary/50 cursor-pointer data-[disabled]:opacity-50 data-[disabled]:pointer-events-none",
 );
 
 const checkIndicatorVariants = cva(
@@ -22,7 +22,7 @@ export default function Neucheckbox(props: CheckboxProps) {
   return (
     <Checkbox.Root {...mergedProps}>
       <Checkbox.Indicator {...mergedIndicatorProps}>
-        <Check className="w-3 h-3" />
+        <Check className="w-3 h-3 text-primary" />
       </Checkbox.Indicator>
     </Checkbox.Root>
   );
