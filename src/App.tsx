@@ -27,7 +27,7 @@ import {
   TabsRoot,
   TabsTab,
 } from "./components/Tabs";
-import { Pause, Play, SkipBack, SkipForward } from "lucide-react";
+import { ChevronDown, Pause, Play, SkipBack, SkipForward } from "lucide-react";
 import { useState } from "react";
 
 function App() {
@@ -146,7 +146,7 @@ function App() {
                   <option value="monthly">Monthly summary</option>
                 </Select>
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">
-                  v
+                  <ChevronDown />
                 </span>
               </div>
             </CardContent>

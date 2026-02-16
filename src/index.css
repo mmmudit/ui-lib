@@ -4,7 +4,7 @@
 
 @theme {
   --color-background: #0c0f1a;
-  --color-foreground: #e6e8f0;
+  --color-foreground: #f1f3f8;
   --color-primary: #7c8cff;
   --color-destructive: #ff6b6b;
   --color-warning: #ffb347;
@@ -12,14 +12,14 @@
   --color-border: rgba(255, 255, 255, 0.12);
   --color-highlight: rgba(255, 255, 255, 0.25);
   --shadow-raised:
-    0 18px 40px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+    0 18px 40px rgba(0, 0, 0, 0.135), 0 2px 8px rgba(0, 0, 0, 0.105),
+    inset 0 1px 0 rgba(255, 255, 255, 0.054),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.018);
   --shadow-inset:
-    inset 0 1px 1px rgba(255, 255, 255, 0.08),
-    inset 0 -2px 6px rgba(0, 0, 0, 0.45), 0 8px 22px rgba(0, 0, 0, 0.35);
+    inset 0 1px 1px rgba(255, 255, 255, 0.024),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.135), 0 8px 22px rgba(0, 0, 0, 0.105);
   --color-muted: rgba(255, 255, 255, 0.08);
-  --color-muted-foreground: rgba(230, 232, 240, 0.6);
+  --color-muted-foreground: rgba(241, 243, 248, 0.7);
 }
 
 @layer base {
@@ -47,5 +47,34 @@
         transparent 60%
       ),
       linear-gradient(160deg, #0b0e18 0%, #0a0d16 50%, #0b0f1a 100%);
+  }
+}
+
+@layer utilities {
+  .shine {
+    background-image: repeating-linear-gradient(
+      125deg,
+      transparent 0%,
+      transparent 15%,
+      rgba(255, 255, 255, 0.25) 25%,
+      transparent 35%,
+      transparent 50%
+    );
+    background-size: 200%;
+    background-position: calc(var(--mx) + 20%) var(--my);
+  }
+
+  .glow {
+    background-image:
+      radial-gradient(
+        100% 50% at calc(50% - var(--mx)) 0%,
+        rgba(255, 255, 255, 0.25) 0%,
+        transparent 80%
+      ),
+      radial-gradient(
+        100% 50% at calc(var(--mx) + 50%) 100%,
+        rgba(255, 255, 255, 0.25) 0%,
+        transparent 80%
+      );
   }
 }

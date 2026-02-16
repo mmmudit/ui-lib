@@ -20,7 +20,7 @@ const rangeVariants = cva("absolute h-full rounded-full bg-primary", {
 });
 
 const thumbVariants = cva(
-  "rounded-full border border-border bg-white/12 backdrop-blur-md shadow-inset active:shadow-raised duration-350 transition-shadow h-5 w-5 cursor-pointer",
+  "rounded-full border border-border bg-primary-/80 backdrop-blur-lg shadow-inset active:shadow-raised duration-350 transition-shadow h-5 w-7 cursor-pointer",
 );
 
 interface SliderProps
